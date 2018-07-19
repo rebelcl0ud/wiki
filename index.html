@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+  <link href="styles/master.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <title>wiki</title>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+     <a class="navbar-brand" href="/index.html">wiki viewer</a>
+    </div>
+  </div><!-- /.container-fluid -->
+</nav>
+<!--
+  user stories:
+    + can search wiki entries in a search box and see resulting wiki entries
+    + can click button to see random wiki entry
+    
+    https://www.mediawiki.org/wiki/API:Main_page
+-->
+<div class="site">
+  <div class="row">
+    <div class="wikiInput col-md-6 col-md-offset-3">
+      <div class="form-group">
+        <div class="input-group">
+          <input type="text" placeholder="wiki search" class="form-control" id="input">
+          <span class="input-group-btn">
+            <button class="btn btn-default" id="go" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+             <button class="btn btn-default" id="random">random wiki</button> 
+          </span>
+        </div><!--end of input-group div--> 
+      </div>
+    </div><!--end of div-->
+  </div><!--end of row-->
+
+  <br />
+
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <p class="wiki"></p>
+    </div>
+  </div>
+</div><!--end of site div-->
+</body>
+</html>
+
+<script src="scripts/index.js"></script>
